@@ -1,5 +1,3 @@
-// app.js
-
 // Import necessary modules
 import { createServer } from "http";
 import { readFile } from "fs";
@@ -36,7 +34,12 @@ const server = createServer((req, res) => {
       res.end("File not found");
     } else {
       res.writeHead(200, { "Content-Type": contentType });
-      res.end(content, "utf-8");
+      // Ensure you serve binary content for images
+      if (extname === ".png") {
+        res.end(content, "binary");
+      } else {
+        res.end(content, "utf-8");
+      }
     }
   });
 });
