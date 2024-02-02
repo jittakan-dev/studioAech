@@ -8,7 +8,7 @@ import { extname as _extname } from "path";
 // Create a server
 const server = createServer((req, res) => {
   let filePath = "." + req.url;
-  if (filePath === ".") {
+  if (filePath === "./") {
     filePath = "./index.html";
   } 
 

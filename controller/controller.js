@@ -6,7 +6,6 @@ const scriptController = (function () {
       "../components/about/about.js",
       "../components/mouse/mouse.js",
       "../components/nav/nav.js",
-      
     ];
 
     function loadModule(src) {
