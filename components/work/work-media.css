@@ -1,0 +1,28 @@
+@media screen and (orientation: landscape) and (max-width: 940px) {
+
+
+    /* smaller screensize */
+    @media screen and (max-aspect-ratio: 16.2/9) {
+
+
+        /*very smaller screen*/
+    }
+
+    /* larger screensize */
+    @media screen and (min-aspect-ratio: 16.2/9) {
+
+        @media screen and (max-height: 300px) {}
+    }
+}
+
+@media screen and (orientation: portrait) {
+    /* narrower screensize NORMAL*/
+    @media screen and (max-aspect-ratio: 9/16.2) {
+
+        /*very narrow screen FOLD*/
+        @media screen and (max-width: 300px) {}
+    }
+
+    /* widener screensize SE/SE OLD */
+    @media screen and (min-aspect-ratio: 9/16.2) {}
+}

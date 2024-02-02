@@ -1,0 +1,29 @@
+.mouse-circle {
+    visibility: hidden;
+    transform: translate(20%, -75%);
+    height: 1.5dvh;
+    width: 1.5dvh;
+    border-radius: 50%;
+    /* border: solid #db5040; */
+    border-width: 2px;
+    background-color: #b3d6d7;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: absolute;
+    z-index: 2001;
+    transition: .1s;
+    transition: width 0.55s ease-in-out, height 0.55s ease-in-out, background-color 0.55s ease, transform 0.25s linear;
+}
+
+.mouse-arrow {
+    font-weight: lighter;
+    color: #db5040;
+    position: absolute;
+    top: 51.5%;
+    left: -100%;
+    transform: translate(-50%, -50%) rotate(-6deg);
+    transition: all 0.5s ease-in-out;
+}
