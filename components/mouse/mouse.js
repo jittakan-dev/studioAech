@@ -14,7 +14,7 @@ export async function mouseInit() {
         mouseModule();
       }
     } else {
-      console.error('Error: Container with id "mpuse" not found.');
+      console.error('Error: Container with id "mouse" not found.');
     }
   } catch (error) {
     console.error('Error fetching module:', error);
