@@ -1,11 +1,11 @@
 const scriptController = (function () {
     const modules = [
-      "./components/layout/layout.js",
-      "./components/home/home.js",
-      "./components/work/work.js",
-      "./components/about/about.js",
-      "./components/mouse/mouse.js",
-      "./components/nav/nav.js",
+      "../components/layout/layout.js",
+      "../components/home/home.js",
+      "../components/work/work.js",
+      "../components/about/about.js",
+      "../components/mouse/mouse.js",
+      "../components/nav/nav.js",
       
     ];
 
