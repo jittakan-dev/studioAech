@@ -25,6 +25,9 @@ const server = createServer((req, res) => {
     case ".png":
       contentType = "image/png";
       break;
+    default:
+      contentType = "application/octet-stream"; // default to binary data
+      break;
   }
 
   // Read and serve the requested file
@@ -34,12 +37,7 @@ const server = createServer((req, res) => {
       res.end("File not found");
     } else {
       res.writeHead(200, { "Content-Type": contentType });
-      // Ensure you serve binary content for images
-      if (extname === ".png") {
-        res.end(content, "binary");
-      } else {
-        res.end(content, "utf-8");
-      }
+      res.end(content, "binary"); // ensure binary encoding for images
     }
   });
 });
