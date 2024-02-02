@@ -24,6 +24,9 @@ const server = createServer((req, res) => {
     case ".html":
       contentType = "text/html";
       break;
+    case ".png":
+      contentType = "image/png";
+      break;
   }
 
   // Read and serve the requested file
