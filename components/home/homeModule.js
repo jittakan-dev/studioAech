@@ -288,21 +288,18 @@ rotateWorld(0, 1);
 });
 
 document.getElementById('wb-2').addEventListener('click', function() {
-rotateWorld(100, 2); //461
+rotateWorld(93, 2); //461
 });
 
 document.getElementById('wb-3').addEventListener('click', function() {
-rotateWorld(250, 3);
+rotateWorld(248, 3);
 });
 
 globeBalloon.addEventListener('click', function() {
-  rotateWorld(100, 2); //461
+  rotateWorld(93, 2); //461
   });
-globeBear.addEventListener('click', function() {
-  rotateWorld(250, 3);
-});
 homeSpeechBubble.addEventListener('click', function() {
-  rotateWorld(250, 3);
+  rotateWorld(248, 3);
 });
 arrowSignImg.addEventListener('click', function() {
 rotateWorld(0, 1);

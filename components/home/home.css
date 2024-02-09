@@ -641,8 +641,8 @@
     position: absolute;
     margin: 0;
     top: 17.5%;
-    left: 2.5%;
-    padding: 2% 0;
+    left: 3%;
+    padding: 2% 0 1.7% 0;
     height: 2rem;
     width: 100%;
     z-index: 7;
@@ -670,8 +670,10 @@
     height: 2rem;
     padding: 2% 0;
     text-align: center;
+    /* letter-spacing: 0.05rem; */
     color: rgba(78, 158, 163, 0.7);
-    font-size: var(--std-130rem-font-size);
+    font-family: 'Bebas Neue';
+    font-size: 2.2rem;
     overflow: hidden;
     display: flex;
     align-items: center;
@@ -698,8 +700,22 @@
 }
 
 .home-title-space {
-    width: 10svw;
+    width: 11svw;
     /* background-color: blue; */
+}
+
+.home-ufo {
+    width: 22.5%;
+    position: absolute;
+    transform: rotate(-255deg);
+    bottom: 40%;
+    left: 95%;
+    z-index: 8;
+}
+
+.home-ufo img {
+    width: 100%;
+    position: relative;
 }
 
 .home-globe-main img,

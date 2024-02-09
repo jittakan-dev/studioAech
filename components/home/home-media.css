@@ -78,9 +78,9 @@
         width: 90%;
     }
 
-    .home-speechBubble {
+    /* .home-speechBubble {
         display: none;
-    }
+    } */
 
     /*---------------------slide-group--------------------*/
 
@@ -306,12 +306,26 @@
     /*--------------------rocket-------------------*/
     /*---------------------core--------------------*/
     .home-speechBubble {
-        display: none;
+        top: 32%;
+        left: 0%;
     }
 
     .home-globe-wheel-l,
     .home-globe-wheel-r {
         top: 92%;
+    }
+
+    .home-globe-balloon,
+    .home-globe-balloon-bg,
+    .home-globe-balloon-small,
+    .home-globe-wheel-group {
+        top: -8%;
+        left: 38%;
+        width: 25%;
+    }
+
+    .home-globe-wheel-group {
+        top: -5%;
     }
 
     /*---------------------core--------------------*/
