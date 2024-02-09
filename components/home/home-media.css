@@ -1,21 +1,42 @@
 @media screen and (orientation: landscape) and (max-width: 1368px) {
-
-    /*---------------------bar-base--------------------*/
-    .home-bar-logo-container {
-        width: 30%;
+    .home-slide-text-container {
+        display: flex;
     }
 
-    .home-bar-content-container {
-        width: 70%;
+    .home-balloon-title-container {
+        display: none;
+    }
 
+    .home-bar-content-quote p {
+        display: flex;
+    }
+
+    .home-bar-content-slide {
+        display: none;
     }
 
     .home-bar-content-quote {
-        width: 60%;
+        display: flex;
+    }
+
+
+    /*---------------------bar-base--------------------*/
+    .home-bar-logo-container {
+        width: 28%;
+    }
+
+    .home-bar-content-container {
+        width: 72%;
+
+    }
+
+    .home-bar-content-slide,
+    .home-bar-content-quote {
+        width: 58%;
     }
 
     .home-bar-content-link {
-        width: 40%;
+        width: 42%;
     }
 
     .home-flip-box {
@@ -53,7 +74,12 @@
     }
 
     .home-slide-body {
+        height: 3.5rem;
         width: 90%;
+    }
+
+    .home-speechBubble {
+        display: none;
     }
 
     /*---------------------slide-group--------------------*/
@@ -100,6 +126,7 @@
                 width: 65%;
             }
 
+            .home-bar-content-slide,
             .home-bar-content-quote {
                 visibility: hidden;
                 width: 40%;
@@ -117,20 +144,21 @@
 
             /*---------------------bar-base--------------------*/
             .home-bar-logo-container {
-                width: 30%;
+                width: 28%;
             }
 
             .home-bar-content-container {
-                width: 70%;
+                width: 72%;
 
             }
 
+            .home-bar-content-slide,
             .home-bar-content-quote {
-                width: 60%;
+                width: 58%;
             }
 
             .home-bar-content-link {
-                width: 40%;
+                width: 42%;
             }
 
             /*---------------------bar-base--------------------*/
@@ -166,6 +194,14 @@
             color: green;
         }
 
+        .home-bar-content-slide,
+        .home-bar-content-quote {
+            width: 56%;
+        }
+
+        .home-bar-content-link {
+            width: 44%;
+        }
 
         /*---------------------bar-base--------------------*/
         /*---------------------core--------------------*/
@@ -206,6 +242,30 @@
 }
 
 @media screen and (orientation: portrait) {
+    .home-slide-text-container {
+        display: flex;
+    }
+
+    .home-balloon-title-container {
+        display: none;
+    }
+
+    .home-bar-content-quote p {
+        display: flex;
+    }
+
+    .home-bar-content-slide {
+        display: none;
+    }
+
+    .home-bar-content-quote {
+        display: flex;
+    }
+
+
+    .home-flip-box {
+        padding: 0 2.5% 0 2.5%;
+    }
 
     /*---------------------bar-base--------------------*/
     .world-bar {
@@ -245,6 +305,10 @@
 
     /*--------------------rocket-------------------*/
     /*---------------------core--------------------*/
+    .home-speechBubble {
+        display: none;
+    }
+
     .home-globe-wheel-l,
     .home-globe-wheel-r {
         top: 92%;
@@ -253,16 +317,9 @@
     /*---------------------core--------------------*/
     /*---------------------slide--------------------*/
     .home-slide-body {
+        height: 4.8rem;
         width: 75%;
         font-size: var(--std-075rem-font-size);
-    }
-
-    .home-slide-body-mobile {
-        display: block;
-    }
-
-    .home-slide-body-desktop {
-        display: none;
     }
 
     .home-slide-title {
@@ -455,26 +512,25 @@
             }
 
             .home-bar-logo-container {
-                width: 48%;
+                width: 47%;
             }
 
             .home-bar-content-container {
-                width: 52%;
+                width: 53%;
 
             }
 
+            .home-bar-content-slide,
             .home-bar-content-quote {
-                width: 5%;
+                width: 3%;
                 visibility: hidden;
             }
 
             .home-bar-content-link {
-                width: 95%;
+                width: 97%;
             }
 
-            .home-flip-box {
-                padding: 0 3% 0 3%;
-            }
+
 
             /*---------------------bar--------------------*/
             /*---------------------slide--------------------*/
@@ -511,21 +567,22 @@
                 }
 
                 .home-bar-logo-container {
-                    width: 40%;
+                    width: 38%;
                 }
 
                 .home-bar-content-container {
-                    width: 60%;
+                    width: 62%;
 
                 }
 
+                .home-bar-content-slide,
                 .home-bar-content-quote {
-                    width: 26%;
+                    width: 21%;
                     visibility: hidden;
                 }
 
                 .home-bar-content-link {
-                    width: 74%;
+                    width: 79%;
                 }
 
                 /*---------------------bar--------------------*/

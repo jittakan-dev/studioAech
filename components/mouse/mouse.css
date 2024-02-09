@@ -27,3 +27,17 @@
     transform: translate(-50%, -50%) rotate(-6deg);
     transition: all 0.5s ease-in-out;
 }
+
+@media screen and (orientation: landscape) and (max-width: 1368px) {
+
+    .mouse-circle {
+        display: none;
+    }
+}
+
+@media screen and (orientation: portrait) {
+    .mouse-circle {
+        display: none;
+    }
+
+}

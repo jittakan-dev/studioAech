@@ -8,6 +8,7 @@ const globeWheel = document.querySelector(".home-globe-wheel-group");
 const arrowSignImg = document.querySelector(".home-arrow-sign");
 const globeBear = document.querySelector(".home-globe-bear");
 const bearItems = document.querySelectorAll(".home-bear-item");
+const homeSpeechBubble = document.querySelector(".home-speechBubble");
 const globeBearEffect = document.querySelector(".home-globe-bear-effect");
 const globeLighthouse = document.querySelector(".home-globe-lighthouse");
 
@@ -22,10 +23,17 @@ const worldSubText = document.querySelector(".world-sub-text");
 const weDoTitle = document.querySelectorAll(".home-slide-we-do-title");
 const weAreTitle = document.querySelectorAll(".home-slide-we-are-title");
 const weGuideTitle = document.querySelectorAll(".home-slide-we-guide-title");
-const weDo = document.querySelector(".home-slide-we-do-body");
-const weAre = document.querySelector(".home-slide-we-are-body");
-const weGuide = document.querySelector(".home-slide-we-guide-body");
 
+const weDoSlide = document.querySelector(".home-slide-we-do-body");
+const weAreSlide = document.querySelector(".home-slide-we-are-body");
+const weGuideSlide = document.querySelector(".home-slide-we-guide-body");
+
+const weDoBar = document.querySelector(".home-bar-we-do");
+const weAreBar = document.querySelector(".home-bar-we-are");
+const weGuideBar = document.querySelector(".home-bar-we-guide");
+
+const homeBalloonTitleContainer = document.querySelector(".home-balloon-title-container");
+const homeBalloonTitle = document.querySelector(".home-balloon-title");
 
 function changeInBalloon() {
 
@@ -52,11 +60,14 @@ function rotateWorld(degrees, index) {
     // meteor(true);
     shuffleItems(false);
 
-        weDo.style.top = "0";
+        weDoSlide.style.top = "0";
+        weDoBar.style.top = "0";
 
-        weAre.style.top = "100%";
+        weAreSlide.style.top = "100%";
+        weAreBar.style.top = "100%";
 
-        weGuide.style.top = "200%";
+        weGuideSlide.style.top = "200%";
+        weGuideBar.style.top = "200%";
 
         weDoTitle.forEach((weDoTitle, index) => {
           setTimeout(() => {
@@ -77,6 +88,8 @@ function rotateWorld(degrees, index) {
     setTimeout(() => {
       globeBearEffect.style.visibility = "hidden";
       globeBearEffect.style.opacity = 0;
+      homeSpeechBubble.style.visibility = "hidden";
+      homeSpeechBubble.style.opacity = 0;
       globeLighthouse.style.visibility = "hidden";
       globeLighthouse.style.opacity = 0;
       setTimeout(() => {
@@ -98,6 +111,8 @@ function rotateWorld(degrees, index) {
           globeBalloonBg.style.transform = "rotate(-20deg)";
           globeBalloonSmall.style.transform = "rotate(-20deg)";
           globeWheel.style.transform = "rotate(-20deg)";
+          homeBalloonTitleContainer.style.opacity="1";
+          homeBalloonTitle.style.top ="0";
           setTimeout(() => {
             globeBalloon.style.transform = "rotate(0deg)";
             globeBalloonBg.style.transform = "rotate(0deg)";
@@ -105,7 +120,6 @@ function rotateWorld(degrees, index) {
             globeWheel.style.transform = "rotate(0deg)";
             isRotationAllowed = false;
             globeBalloonSmall.style.opacity = 1;
-
           }, 500);
         }, 720);
       }, 700);
@@ -113,9 +127,21 @@ function rotateWorld(degrees, index) {
   } else if (index == 2) {    
     shuffleItems(true);
     isRotationAllowed = true;
-        weDo.style.top = "-100%";
-        weAre.style.top ="0";
-        weGuide.style.top = "100%";
+        // weDo.style.top = "-100%";
+        // weAre.style.top ="0";
+        // weGuide.style.top = "100%";
+
+        weDoSlide.style.top = "-100%";
+        weDoBar.style.top = "-100%";
+        setTimeout(() => {
+          homeBalloonTitleContainer.style.opacity="0";
+          homeBalloonTitle.style.top ="100%";
+        }, 100);
+        weAreSlide.style.top = "0";
+        weAreBar.style.top = "0";
+
+        weGuideSlide.style.top = "100%";
+        weGuideBar.style.top = "100%";
 
         weDoTitle.forEach((weDoTitle, index) => {
           setTimeout(() => {
@@ -160,7 +186,9 @@ function rotateWorld(degrees, index) {
         setTimeout(() => {
           setTimeout(() => {
             globeBearEffect.style.visibility = "visible";
-            globeBearEffect.style.opacity = 1;
+            globeBearEffect.style.opacity = 1;            
+            homeSpeechBubble.style.visibility = "visible";
+            homeSpeechBubble.style.opacity = 1;
             // meteor(false);
           }, 500);
         }, 900);
@@ -171,11 +199,21 @@ function rotateWorld(degrees, index) {
     shuffleItems(false);
     isRotationAllowed = true;
 
-        weDo.style.top = "-200%";
+        // weDo.style.top = "-200%";
 
-        weAre.style.top = "-100%";
+        // weAre.style.top = "-100%";
 
-        weGuide.style.top = "0";
+        // weGuide.style.top = "0";
+
+        weDoSlide.style.top = "-200%";
+        weDoBar.style.top = "-200%";
+
+        weAreSlide.style.top = "-100%";
+        weAreBar.style.top = "-100%";
+
+        weGuideSlide.style.top = "0";
+        weGuideBar.style.top = "0";
+
         weDoTitle.forEach((weDoTitle, index) => {
           setTimeout(() => {
             weDoTitle.style.top = "-200%";
@@ -195,6 +233,8 @@ function rotateWorld(degrees, index) {
       globeBalloonSmall.style.opacity = 0;
       globeBearEffect.style.visibility = "hidden";
       globeBearEffect.style.opacity = 0;
+      homeSpeechBubble.style.visibility = "hidden";
+      homeSpeechBubble.style.opacity = 0;
     }, 400);
         setTimeout(() => {
           setTimeout(() => {
@@ -255,15 +295,19 @@ document.getElementById('wb-3').addEventListener('click', function() {
 rotateWorld(250, 3);
 });
 
+globeBalloon.addEventListener('click', function() {
+  rotateWorld(100, 2); //461
+  });
 globeBear.addEventListener('click', function() {
+  rotateWorld(250, 3);
+});
+homeSpeechBubble.addEventListener('click', function() {
   rotateWorld(250, 3);
 });
 arrowSignImg.addEventListener('click', function() {
 rotateWorld(0, 1);
 });
-globeBalloon.addEventListener('click', function() {
-rotateWorld(100, 2); //461
-});
+
 // globeBalloon.addEventListener('mouseover',changeInBalloon);
 // globeBalloon.addEventListener('mouseleave',changeOutBalloon);
 
