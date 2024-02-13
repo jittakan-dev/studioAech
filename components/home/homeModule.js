@@ -236,7 +236,7 @@ export const homeModule = () => {
         weAreBar.style.top = "-100%";
         weGuideSlide.style.top = "0";
         weGuideBar.style.top = "0";
-      }, 500);
+      }, 700);
     }, 1200);
     }
     setTimeout(() => {
