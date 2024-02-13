@@ -44,12 +44,12 @@ export const homeModule = () => {
 
     if (index == 1) {
       shuffleItems(false);
-      // weDoSlide.style.top = "0";
-      // weDoBar.style.top = "0";
-      // weAreSlide.style.top = "100%";
-      // weAreBar.style.top = "100%";
-      // weGuideSlide.style.top = "200%";
-      // weGuideBar.style.top = "200%";
+      weDoSlide.style.top = "0";
+      weDoBar.style.top = "0";
+      weAreSlide.style.top = "100%";
+      weAreBar.style.top = "100%";
+      weGuideSlide.style.top = "200%";
+      weGuideBar.style.top = "200%";
 
       weDoTitle.forEach((weDoTitle, index) => {
         setTimeout(() => {
@@ -88,14 +88,14 @@ export const homeModule = () => {
           globeBalloonSmall.style.transform = "rotate(10deg)";
           globeWheel.style.transform = "rotate(10deg)";
           setTimeout(() => {
-            setTimeout(() => {
-              weDoSlide.style.top = "0";
-              weDoBar.style.top = "0";
-              weAreSlide.style.top = "100%";
-              weAreBar.style.top = "100%";
-              weGuideSlide.style.top = "200%";
-              weGuideBar.style.top = "200%";
-            }, 500);
+            // setTimeout(() => {
+            //   weDoSlide.style.top = "0";
+            //   weDoBar.style.top = "0";
+            //   weAreSlide.style.top = "100%";
+            //   weAreBar.style.top = "100%";
+            //   weGuideSlide.style.top = "200%";
+            //   weGuideBar.style.top = "200%";
+            // }, 500);
             globeBalloon.style.transform = "rotate(-20deg)";
             globeBalloonBg.style.transform = "rotate(-20deg)";
             globeBalloonSmall.style.transform = "rotate(-20deg)";
@@ -117,12 +117,12 @@ export const homeModule = () => {
     } else if (index == 2) {    
       shuffleItems(true);
       isRotationAllowed = true;
-      // weDoSlide.style.top = "-100%";
-      // weDoBar.style.top = "-100%";
-      // weAreSlide.style.top = "0";
-      // weAreBar.style.top = "0";
-      // weGuideSlide.style.top = "100%";
-      // weGuideBar.style.top = "100%";
+      weDoSlide.style.top = "-100%";
+      weDoBar.style.top = "-100%";
+      weAreSlide.style.top = "0";
+      weAreBar.style.top = "0";
+      weGuideSlide.style.top = "100%";
+      weGuideBar.style.top = "100%";
 
       setTimeout(() => {
         homeBalloonTitleContainer.style.opacity="0";
@@ -170,14 +170,14 @@ export const homeModule = () => {
           globeBalloonBg.style.transform = "rotate(0deg)";
           globeBalloonSmall.style.transform = "rotate(0deg)";
           globeWheel.style.transform = "rotate(0deg)";
-          setTimeout(() => {
-            weDoSlide.style.top = "-100%";
-            weDoBar.style.top = "-100%";
-            weAreSlide.style.top = "0";
-            weAreBar.style.top = "0";
-            weGuideSlide.style.top = "100%";
-            weGuideBar.style.top = "100%";
-          }, 500);
+          // setTimeout(() => {
+          //   weDoSlide.style.top = "-100%";
+          //   weDoBar.style.top = "-100%";
+          //   weAreSlide.style.top = "0";
+          //   weAreBar.style.top = "0";
+          //   weGuideSlide.style.top = "100%";
+          //   weGuideBar.style.top = "100%";
+          // }, 500);
           setTimeout(() => {
             setTimeout(() => {            
               homeSpeechBubble.style.visibility = "visible";
@@ -189,12 +189,12 @@ export const homeModule = () => {
     } else if (index == 3) {
       shuffleItems(false);
       isRotationAllowed = true;
-      // weDoSlide.style.top = "-200%";
-      // weDoBar.style.top = "-200%";
-      // weAreSlide.style.top = "-100%";
-      // weAreBar.style.top = "-100%";
-      // weGuideSlide.style.top = "0";
-      // weGuideBar.style.top = "0";
+      weDoSlide.style.top = "-200%";
+      weDoBar.style.top = "-200%";
+      weAreSlide.style.top = "-100%";
+      weAreBar.style.top = "-100%";
+      weGuideSlide.style.top = "0";
+      weGuideBar.style.top = "0";
 
       weDoTitle.forEach((weDoTitle, index) => {
         setTimeout(() => {
@@ -229,14 +229,14 @@ export const homeModule = () => {
         globeLighthouse.style.opacity = 1;
 
       }, 1200);
-      setTimeout(() => {
-        weDoSlide.style.top = "-200%";
-        weDoBar.style.top = "-200%";
-        weAreSlide.style.top = "-100%";
-        weAreBar.style.top = "-100%";
-        weGuideSlide.style.top = "0";
-        weGuideBar.style.top = "0";
-      }, 700);
+      // setTimeout(() => {
+      //   weDoSlide.style.top = "-200%";
+      //   weDoBar.style.top = "-200%";
+      //   weAreSlide.style.top = "-100%";
+      //   weAreBar.style.top = "-100%";
+      //   weGuideSlide.style.top = "0";
+      //   weGuideBar.style.top = "0";
+      // }, 700);
     }, 1200);
     }
     setTimeout(() => {
