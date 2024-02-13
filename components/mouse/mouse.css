@@ -6,7 +6,7 @@
     border-radius: 50%;
     /* border: solid #db5040; */
     border-width: 2px;
-    background-color: #b3d6d7;
+    background-color: rgba(179, 214, 215, 0.5);
     display: flex;
     flex-direction: column;
     justify-content: center;

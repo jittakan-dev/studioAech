@@ -27,6 +27,7 @@ function handleMouseOver(event) {
     mouseCircle.style.width ="10dvh";  
     mouseCircle.style.height ="10dvh"; 
     mouseCircle.style.backgroundColor ="#b3d6d7"; 
+    // mouseCircle.style.backgroundColor ="rgba(179, 214, 215, 0.9)"; 
     mouseArrow.style.left="50.5%";
 }
 function handleMouseOut(event) {

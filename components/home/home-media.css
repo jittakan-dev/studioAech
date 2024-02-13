@@ -7,6 +7,10 @@
         display: none;
     }
 
+    .home-ufo-group {
+        display: none;
+    }
+
     .home-bar-content-quote p {
         display: flex;
     }
@@ -242,6 +246,10 @@
 }
 
 @media screen and (orientation: portrait) {
+    .home-ufo-group {
+        display: none;
+    }
+
     .home-slide-text-container {
         display: flex;
     }
