@@ -38,7 +38,6 @@ const scriptController = (function () {
       .loadModules()
       .then(() => {
         console.log("All modules loaded successfully.");
-        // Hide loader and show content when all assets have loaded
         document.getElementById('loader').style.display = 'none';
         document.getElementById('app').style.display = 'block';
         document.body.classList.remove('loading');
