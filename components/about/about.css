@@ -12,6 +12,7 @@
     border-bottom-left-radius: 16px;
     border-bottom-right-radius: 16px;
     color: var(--base-font-color);
+    scroll-behavior: smooth;
 }
 
 .about-content-container {
