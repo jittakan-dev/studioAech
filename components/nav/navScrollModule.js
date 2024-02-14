@@ -1,13 +1,11 @@
+const qs = (selector) => document.querySelector(selector);
 
 export const navScrollModule = () => {
-  
-  const menuSection = document.querySelector(".menu-section");
-  const menuButtonClick = document.querySelector(".bubble-button-hamburger");
-  const hiddenMenuLinks = document.querySelectorAll(".right-menu a");
-  const dotGroupLinks = document.querySelectorAll(".nav-dot-group a");
-  const homeBarLinks = document.querySelectorAll(".home-bar-content-link a");
-  const aboutContainer = document.querySelector(".about-container");
-  const aboutContent = document.querySelector(".about-content");
+  const menuSection = qs(".menu-section");
+  const menuButtonClick = qs(".bubble-button-hamburger");
+  const hiddenMenuLinks = document.querySelectorAll(".right-menu a, .nav-dot-group a, .home-bar-content-link a");
+  const aboutContainer = qs(".about-container");
+  const aboutContent = qs(".about-content-container");
 
   const smoothScroll = () => {
     document.documentElement.style.scrollBehavior = "smooth";
@@ -24,8 +22,8 @@ export const navScrollModule = () => {
     menuSection.classList.toggle("active");
   };
 
-  const scrollToTarget = (targetId) => {
-    const targetSection = document.querySelector(targetId);
+  const scrollToTarget = (targetId, scrollLeft) => {
+    const targetSection = qs(targetId);
     if (targetSection) {
       const targetOffset = targetSection.getBoundingClientRect().top;
       const initialOffset = window.scrollY;
@@ -52,39 +50,28 @@ export const navScrollModule = () => {
         }
       }
       requestAnimationFrame(scrollStep);
+
+      setTimeout(() => {
+        aboutContainer.scrollTo({
+          left: scrollLeft,
+          behavior: "smooth",
+        });
+      }, 1400);
     }
   };
 
   menuButtonClick.addEventListener("click", toggleMenu);
 
-  [...hiddenMenuLinks, ...dotGroupLinks, ...homeBarLinks].forEach(
-    (link) => {
-      link.addEventListener("click", (event) => {
-        smoothScroll();
-        menuSection.classList.remove("active");
-        menuButtonClick.classList.remove("menu-active");
-        event.preventDefault();
-        const targetId = link.getAttribute("href");
-        if (targetId === "#contact") {
-          scrollToTarget(targetId);
-          setTimeout(() => {
-            aboutContainer.scrollTo({
-              left: aboutContent.offsetWidth + 2,
-              behavior: "smooth",
-            });
-          }, 1400);
-        } else if (targetId === "#about") {
-          scrollToTarget(targetId);
-          setTimeout(() => {
-            aboutContainer.scrollTo({
-              left: 0,
-              behavior: "smooth",
-            });
-          }, 1400);
-        }
-        scrollToTarget(targetId);
-        setTimeout(resetScrollBehavior, 1000);
-      });
-    }
-  );
+  hiddenMenuLinks.forEach((link) => {
+    link.addEventListener("click", (event) => {
+      smoothScroll();
+      menuSection.classList.remove("active");
+      menuButtonClick.classList.remove("menu-active");
+      event.preventDefault();
+      const targetId = link.getAttribute("href");
+      const scrollLeft = targetId === "#contact" ? aboutContent.offsetWidth + 2 : 0;
+      scrollToTarget(targetId, scrollLeft);
+      setTimeout(resetScrollBehavior, 1000);
+    });
+  });
 };

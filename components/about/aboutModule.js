@@ -1,50 +1,30 @@
+const qs = (selector) => document.querySelector(selector);
+
 export const aboutModule = () => {
-const aboutContainer = document.querySelector(".about-container");
-const aboutContentContainer = document.querySelector(".about-content-container");
-const aboutToLeft = document.getElementById("AboutToLeft");
-const aboutToRight = document.getElementById("AboutToRight");
-const otwdHubButton = document.getElementById("otwdHubButton");
-const writeUsButton = document.getElementById("writeUsButton");
-const hubGroup = document.getElementById("hubGroup");
-const formGroup = document.getElementById("formGroup");
+  const aboutContainer = qs(".about-container"),
+    aboutContentContainer = qs(".about-content-container"),
+    otwdHubButton = qs("#otwdHubButton"),
+    writeUsButton = qs("#writeUsButton"),
+    hubGroup = qs("#hubGroup"),
+    formGroup = qs("#formGroup"),
+    contactScroll = qs(".form-hub-slide-group");
 
-otwdHubButton.addEventListener("click", function () {
-  otwdHubButton.classList.add("contactTypeButtonActive");
-  writeUsButton.classList.remove("contactTypeButtonActive");
-  const hubGroupRect = hubGroup.getBoundingClientRect();
-  const contactScroll = document.querySelector(".form-hub-slide-group");
-  const contactScrollRect = contactScroll.getBoundingClientRect();
+  const toggleButton = (activeButton, inactiveButton, yOffset) => {
+    activeButton.classList.add("contactTypeButtonActive");
+    inactiveButton.classList.remove("contactTypeButtonActive");
+    contactScroll.style = `scroll-behavior: smooth; transform: translateY(-${Math.abs(yOffset)}px)`;
+  };
 
-  const yOffset = hubGroupRect.top - contactScrollRect.top;
-  contactScroll.style.scrollBehavior = "smooth";
-  contactScroll.style.transform = `translateY(-${Math.abs(yOffset)}px)`;
-});
-
-writeUsButton.addEventListener("click", function () {
-  writeUsButton.classList.add("contactTypeButtonActive");
-  otwdHubButton.classList.remove("contactTypeButtonActive");
-  const formGroupRect = formGroup.getBoundingClientRect();
-  const contactScroll = document.querySelector(".form-hub-slide-group");
-  const contactScrollRect = contactScroll.getBoundingClientRect();
-
-  const yOffset = formGroupRect.top - contactScrollRect.top;
-  contactScroll.style.scrollBehavior = "smooth";
-  contactScroll.style.transform = `translateY(-${Math.abs(yOffset)}px)`;
-});
-
-aboutToLeft.addEventListener("click", () => {
-  aboutContainer.scrollTo({
-    left: 0,
-    behavior: "smooth",
+  otwdHubButton.addEventListener("click", () => {
+    const yOffset = hubGroup.getBoundingClientRect().top - contactScroll.getBoundingClientRect().top;
+    toggleButton(otwdHubButton, writeUsButton, yOffset);
   });
-});
 
-aboutToRight.addEventListener("click", () => {
-  aboutContainer.scrollTo({
-    left: aboutContentContainer.offsetWidth + 2, //browser gap error
-    behavior: "smooth",
+  writeUsButton.addEventListener("click", () => {
+    const yOffset = formGroup.getBoundingClientRect().top - contactScroll.getBoundingClientRect().top;
+    toggleButton(writeUsButton, otwdHubButton, yOffset);
   });
-});
 
-
-}
+  qs("#AboutToLeft").addEventListener("click", () => aboutContainer.scrollTo({ left: 0, behavior: "smooth" }));
+  qs("#AboutToRight").addEventListener("click", () => aboutContainer.scrollTo({ left: aboutContentContainer.offsetWidth + 2, behavior: "smooth" }));
+};

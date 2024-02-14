@@ -32,14 +32,18 @@ const scriptController = (function () {
   })();
 
   document.body.classList.add('loading');
-
+  const loader = document.getElementById('loader');
   document.addEventListener("DOMContentLoaded", () => {
     scriptController
       .loadModules()
       .then(() => {
         console.log("All modules loaded successfully.");
-        document.getElementById('loader').style.display = 'none';
+        
         document.getElementById('app').style.display = 'block';
+        setTimeout(() => {
+          loader.style.top = "-100%";
+          // loader.style.display = 'none';
+        }, 1000);
         document.body.classList.remove('loading');
       })
       .catch((error) => {
