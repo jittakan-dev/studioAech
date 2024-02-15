@@ -707,32 +707,32 @@
     filter: none;
 }
 
-.home-balloon-img,
-.home-balloonBg-img {
+.home-globe-balloon img,
+.home-globe-balloon-bg img {
     transform-origin: center bottom;
     transition: all 0.5s ease-in-out;
     animation: swingBalloon 5s infinite;
 }
 
-.home-smallBalloon-img {
+.home-globe-balloon-small img {
     transform-origin: center bottom;
     transition: all 0.5s ease-in-out;
     animation: floatSmallBalloon 5s infinite;
 }
 
-.home-wheelL-img {
+.home-globe-wheel-l img {
     transform-origin: center center;
     transition: all 0.5s ease-in-out;
     animation: swingWheel 5s infinite;
 }
 
-.home-wheelR-img {
+.home-globe-wheel-r img {
     transform-origin: center center;
     transition: all 0.5s ease-in-out;
     animation: swingWheel 5s infinite;
 }
 
-.home-worldGreen-img {
+.home-globe-spin img {
     transform-origin: center center;
     transition: all 0.05s linear;
     animation: spinWorld 100s infinite;
