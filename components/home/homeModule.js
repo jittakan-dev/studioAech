@@ -157,4 +157,21 @@ export const homeModule = () => {
   rotateWorldOnClick(globeBalloon, 94, 2, 2);
   rotateWorldOnClick(homeSpeechBubble, 245, 3, 2);
   rotateWorldOnClick(arrowSignImg, 0, 1, 2);
+
+  const loader = document.getElementById('homeLoader');
+  const homeContainer = document.querySelector('.home-container');
+  const images = homeContainer.querySelectorAll('img');
+  
+  let imagesLoaded = 0;
+  
+  images.forEach(image => {
+    image.addEventListener('load', () => {
+      imagesLoaded++;
+  
+      if (imagesLoaded === images.length) {
+        loader.style.display = 'none';
+        // homeContainer.style.display = 'block'; // Or any other desired display style
+      }
+    });
+  });
 };

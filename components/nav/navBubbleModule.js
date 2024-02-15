@@ -15,8 +15,8 @@ export const navBubbleModule = () => {
   let menuButtonRect;
   let viewportRect;
 
-  menuBubble.addEventListener("mousedown", startDrag);
-  menuBubble.addEventListener("touchstart", startDrag);
+  menuBubble.addEventListener("mousedown", startDrag, {passive: true});
+  menuBubble.addEventListener("touchstart", startDrag, {passive: true});
 
   function startDrag(e) {
     e.preventDefault();

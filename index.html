@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Component-Based Example</title>
+    <title>StudioAech</title>
     <link rel="shortcut icon" href="#" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -41,11 +41,36 @@
     <link rel="stylesheet" href="components/loader/loader.css" />
     <link rel="stylesheet" href="components/layout/layout.css" />
     <link rel="stylesheet" href="components/home/home.css" />
-    <link rel="stylesheet" href="components/home/home-media.css" />
+    <link
+      rel="preload"
+      href="components/home/home-media.css"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript
+      ><link rel="stylesheet" href="components/home/home-media.css" />
+    </noscript>
     <link rel="stylesheet" href="components/work/work.css" />
+    <link
+      rel="preload"
+      href="components/work/work-media.css"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript
+      ><link rel="stylesheet" href="components/work/work-media.css" />
+    </noscript>
     <link rel="stylesheet" href="components/work/work-media.css" />
     <link rel="stylesheet" href="components/about/about.css" />
-    <link rel="stylesheet" href="components/about/about-media.css" />
+    <link
+      rel="preload"
+      href="components/about/about-media.css"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript
+      ><link rel="stylesheet" href="components/about/about-media.css" />
+    </noscript>
     <link rel="stylesheet" href="components/mouse/mouse.css" />
     <link rel="stylesheet" href="components/nav/nav.css" />
     <link rel="stylesheet" href="components/nav/nav-media.css" />
@@ -89,12 +114,14 @@
   </head>
   <body>
     <!-- <div id="loader"></div> -->
-    <div id="app"></div>
+    <div class="mainLoader" id="mainLoader"></div>
+    <div id="app" style="display: none"></div>
+    <script type="module" src="components/loader/loader.js"></script>
     <script type="module" src="components/layout/layout.js"></script>
     <script type="module" src="components/about/about.js"></script>
     <script type="module" src="components/home/home.js"></script>
     <script type="module" src="components/work/work.js"></script>
-    <script type="module" src="components/mouse/mouse.js"></script>
     <script type="module" src="components/nav/nav.js"></script>
+    <script type="module" src="components/mouse/mouse.js"></script>
   </body>
 </html>

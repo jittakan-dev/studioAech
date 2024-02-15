@@ -217,7 +217,6 @@
 }
 
 .right-menu a:hover,
-/*----------------------------------*/
 .left-menu a:hover {
     color: #000c0c;
     background-color: #1b8388;
@@ -225,23 +224,12 @@
 }
 
 .right-menu a:last-child {
-    /* padding: 1% 0; */
     font-family: "Megrim";
     font-size: 1.9rem;
     font-weight: bolder;
-    letter-spacing: 0.05rem;
-    line-height: 100%;
-    /* background-color: red; */
-    padding-top: 0;
-}
-
-.right-menu a:last-child:hover {
-    padding: 3%;
-    line-height: 120%;
 }
 
 .bubbleLinkActive {
-    padding: 4%;
     background-color: #c34334;
     color: #000c0c;
 }
