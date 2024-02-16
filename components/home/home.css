@@ -760,7 +760,7 @@
     }
 
     100% {
-        transform: translateY(-200%);
+        transform: translateY(-500%);
         opacity: 1;
     }
 

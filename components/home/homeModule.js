@@ -53,15 +53,17 @@ export const homeModule = () => {
 
       homeSpeechBubble.style.visibility = "hidden";
       homeSpeechBubble.style.opacity = 0;
-      globeLighthouse.style.visibility = "hidden";
-      globeLighthouse.style.opacity = 0;
+
       homeUfoGroup.style.bottom = "120%";
-      
+      setTimeout(() => {
+        globeLighthouse.style.visibility = "hidden";
+        globeLighthouse.style.opacity = 0;
+      }, 400);
       setTimeout(() => {
         laser.forEach(element => {
               element.style.animation = "none";
           });
-      }, 400);
+      }, 1000);
   
       setTimeout(() => {          
         globeBalloon.style.transform = "rotate(10deg)";
@@ -83,6 +85,7 @@ export const homeModule = () => {
             globeBalloonSmall.style.transform = "rotate(0deg)";
             globeWheel.style.transform = "rotate(0deg)";
             globeBalloonSmall.style.opacity = 1;
+            
           }, 500);    
         }, 720);    
       }, 700);    
