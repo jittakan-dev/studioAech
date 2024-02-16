@@ -602,6 +602,8 @@
 }
 
 .home-globe-balloon-small {
+    left: 46.5%;
+    width: 9%;
     z-index: 9;
 }
 
