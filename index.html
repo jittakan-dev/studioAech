@@ -85,17 +85,18 @@
     <link rel="stylesheet" href="components/mouse/mouse.css" />
     <link rel="stylesheet" href="components/nav/nav.css" />
     <link rel="stylesheet" href="components/nav/nav-media.css" />
+    <script type="module" src="components/loader/loader.js"></script>
   </head>
   <body>
     <!-- <div id="loader"></div> -->
     <div class="mainLoader" id="mainLoader"></div>
     <div id="app" style="display: none"></div>
-    <script type="module" src="components/loader/loader.js"></script>
+
     <script type="module" src="components/layout/layout.js"></script>
-    <script type="module" src="components/home/home.js"></script>
-    <script type="module" src="components/work/work.js" async></script>
-    <script type="module" src="components/about/about.js" async></script>
-    <script type="module" src="components/nav/nav.js" async></script>
-    <script type="module" src="components/mouse/mouse.js" async></script>
+    <script type="module" src="components/home/home.js" defer></script>
+    <script type="module" src="components/work/work.js" defer></script>
+    <script type="module" src="components/about/about.js" defer></script>
+    <script type="module" src="components/nav/nav.js" defer></script>
+    <script type="module" src="components/mouse/mouse.js" defer></script>
   </body>
 </html>
