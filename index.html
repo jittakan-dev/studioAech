@@ -38,17 +38,14 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="components/loader/loader.css" />
+    <link rel="stylesheet" href="components/init/loader.css" />
     <link rel="stylesheet" href="components/layout/layout.css" />
     <link
       rel="preload"
-      href="components/loader/defer.css"
+      href="components/init/defer.css"
       as="style"
       onload="this.onload=null;this.rel='stylesheet'"
     />
-    <noscript>
-      <link rel="stylesheet" href="components/loader/defer.css" />
-    </noscript>
     <link rel="stylesheet" href="components/home/home.css" />
     <link
       rel="preload"
@@ -56,10 +53,6 @@
       as="style"
       onload="this.onload=null;this.rel='stylesheet'"
     />
-    <noscript>
-      <link rel="stylesheet" href="components/home/home-media.css" />
-    </noscript>
-    <!-- <link rel="stylesheet" href="components/home/home-media.css" /> -->
     <link rel="stylesheet" href="components/work/work.css" />
     <link
       rel="preload"
@@ -67,10 +60,6 @@
       as="style"
       onload="this.onload=null;this.rel='stylesheet'"
     />
-    <noscript>
-      <link rel="stylesheet" href="components/work/work-media.css" />
-    </noscript>
-    <!-- <link rel="stylesheet" href="components/work/work-media.css" /> -->
     <link rel="stylesheet" href="components/about/about.css" />
     <link
       rel="preload"
@@ -78,25 +67,25 @@
       as="style"
       onload="this.onload=null;this.rel='stylesheet'"
     />
-    <noscript>
-      <link rel="stylesheet" href="components/about/about-media.css" />
-    </noscript>
-    <!-- <link rel="stylesheet" href="components/about/about-media.css" /> -->
     <link rel="stylesheet" href="components/mouse/mouse.css" />
     <link rel="stylesheet" href="components/nav/nav.css" />
     <link rel="stylesheet" href="components/nav/nav-media.css" />
-    <script type="module" src="components/loader/loader.js"></script>
+    <noscript>
+      <link rel="stylesheet" href="components/init/defer.css" />
+    </noscript>
+    <noscript>
+      <link rel="stylesheet" href="components/home/home-media.css" />
+    </noscript>
+    <noscript>
+      <link rel="stylesheet" href="components/work/work-media.css" />
+    </noscript>
+    <noscript>
+      <link rel="stylesheet" href="components/about/about-media.css" />
+    </noscript>
   </head>
   <body>
-    <!-- <div id="loader"></div> -->
-    <div class="mainLoader" id="mainLoader"></div>
+    <div class="mainLoader" id="mainLoader">ABC</div>
     <div id="app" style="display: none"></div>
-
-    <script type="module" src="components/layout/layout.js"></script>
-    <script type="module" src="components/home/home.js" defer></script>
-    <script type="module" src="components/work/work.js" defer></script>
-    <script type="module" src="components/about/about.js" defer></script>
-    <script type="module" src="components/nav/nav.js" defer></script>
-    <script type="module" src="components/mouse/mouse.js" defer></script>
+    <script type="module" src="controller/controller.js" defer></script>
   </body>
 </html>

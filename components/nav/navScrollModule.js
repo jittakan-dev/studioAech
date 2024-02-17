@@ -28,8 +28,8 @@ export const navScrollModule = () => {
       const targetOffset = targetSection.getBoundingClientRect().top;
       const initialOffset = window.scrollY;
       const difference = targetOffset;
-      const minDuration = 400;
-      const maxDuration = 700;
+      const minDuration = 500;
+      const maxDuration = 800;
       const exponent = 0.5;
       const distance = Math.abs(difference);
       const duration = Math.min(
