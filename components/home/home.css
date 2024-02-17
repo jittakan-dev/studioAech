@@ -24,7 +24,6 @@
     justify-content: center;
     align-items: center;
     background-color: #171717;
-    /* display: none; */
 }
 
 .home-bar-container {
@@ -143,18 +142,6 @@
     display: none;
 }
 
-.highlight-text {
-    color: #4E9EA3;
-}
-
-.home-bar-quote {
-    top: 0;
-    left: 0;
-    position: absolute;
-    padding: 0.57rem;
-    padding-top: 0.7rem;
-}
-
 .home-bar-we-do {
     top: 0;
     left: 0;
@@ -227,9 +214,6 @@
     transform-style: preserve-3d;
 }
 
-.home-flip-box:hover .home-flip-box-inner {
-    transform: rotateX(180deg) translate(0, -10%);
-}
 
 .home-flip-box-front,
 .home-flip-box-back,
@@ -248,7 +232,6 @@
     -moz-backface-visibility: hidden;
     color: var(--base-font-color);
     overflow: hidden;
-
 }
 
 .home-flip-box-front {
@@ -266,20 +249,6 @@
     animation: blink 1s infinite;
 }
 
-@keyframes blink {
-
-    0%,
-    50%,
-    100% {
-        opacity: 0.4;
-    }
-
-    25%,
-    75% {
-        opacity: 1;
-    }
-}
-
 .home-flip-box-back {
     position: absolute;
     top: 2%;
@@ -287,18 +256,6 @@
     -webkit-transform: rotateX(260deg) translate(0, 0);
     -ms-transform: rotateX(260deg) translate(0, 0);
     opacity: 0.7;
-    background-color: #001719;
-}
-
-.home-flip-box-back-c {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    border-radius: 50%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(84%);
     background-color: #001719;
 }
 
@@ -314,17 +271,6 @@
     background-color: #001719;
 }
 
-.home-flip-box-back-d {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    border-radius: 32%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) rotate(45deg) scale(80%);
-    background-color: #001719;
-}
 
 .flip-a-0 {
     width: 30%;
@@ -408,15 +354,6 @@
     padding: 0;
 }
 
-@keyframes moveRocket {
-    from {
-        transform: translateX(0%);
-    }
-
-    to {
-        transform: translateX(calc(160% + 2.5%));
-    }
-}
 
 .home-rocket-tail-2 {
     width: 0%;
@@ -468,32 +405,6 @@
 
 }
 
-@keyframes moveRocketTail {
-    0% {
-        width: 0%;
-        transform: translateX(0%);
-    }
-
-    100% {
-        width: calc(100% + 5%);
-        transform: translateX(calc(100% + 2.5%));
-    }
-
-}
-
-@keyframes rocketTailAnimation {
-    0% {
-        background-position: 100% 50%;
-    }
-
-    50% {
-        background-position: 0% 0%;
-    }
-
-    100% {
-        background-position: 100% 50%;
-    }
-}
 
 .home-globe-container {
     width: 160svh;
@@ -522,9 +433,6 @@
     position: absolute;
 }
 
-.home-globe-balloon.balloon-active {
-    transition: none;
-}
 
 .home-globe-main {
     width: 100%;
@@ -620,7 +528,6 @@
     height: 2rem;
     width: 100%;
     z-index: 7;
-    /*#012f31*/
     background-color: rgba(1, 47, 49, 0.2);
     border-top-right-radius: 32px;
     border-top-left-radius: 32px;
@@ -644,7 +551,6 @@
     height: 2rem;
     padding: 2% 0;
     text-align: center;
-    /*4e9ea3*/
     color: rgb(78, 158, 163, 0.7);
     font-family: 'Bebas Neue';
     font-size: 2.2rem;
@@ -719,7 +625,7 @@
 .home-smallBalloon-img {
     transform-origin: center bottom;
     transition: all 0.5s ease-in-out;
-    animation: floatSmallBalloon 5s infinite;
+    animation: floatSmallBalloon 7s infinite;
 }
 
 .home-wheelL-img {
@@ -739,69 +645,6 @@
     transition: all 0.05s linear;
     animation: spinWorld 100s infinite;
     opacity: 0.8;
-}
-
-@keyframes floatSmallBalloon {
-
-    0% {
-        transform: translateY(5%);
-        opacity: 0;
-    }
-
-    25% {
-        transform: translateY(10%);
-        opacity: 1;
-    }
-
-    50% {
-        transform: translateY(0%);
-        opacity: 1;
-
-    }
-
-    100% {
-        transform: translateY(-500%);
-        opacity: 1;
-    }
-
-}
-
-@keyframes swingBalloon {
-
-    0%,
-    100% {
-        transform: translateY(-10%);
-    }
-
-    50% {
-        transform: translateY(-2%);
-    }
-}
-
-@keyframes swingWheel {
-
-    0% {
-        transform: translateY(-100%) rotate(0deg);
-    }
-
-    50% {
-        transform: translateY(20%) rotate(720deg);
-    }
-
-    100% {
-        transform: translateY(-100%) rotate(1440deg);
-    }
-}
-
-@keyframes spinWorld {
-
-    0% {
-        transform: rotate(0deg);
-    }
-
-    100% {
-        transform: rotate(-360deg);
-    }
 }
 
 .home-globe-bear {
@@ -891,23 +734,6 @@
     z-index: 8;
 }
 
-@keyframes animateHalo {
-    0% {
-        border-radius: 40% 60% 35% 65% / 47% 40% 60% 53%;
-        transform: scale(0.9) rotate(0deg);
-    }
-
-    50% {
-        border-radius: 60% 40% 65% 35% / 40% 47% 53% 60%;
-        transform: scale(1.1) rotate(180deg);
-    }
-
-    100% {
-        border-radius: 40% 60% 35% 65% / 47% 40% 60% 53%;
-        transform: scale(0.9) rotate(360deg);
-    }
-}
-
 .home-laser-beam {
     position: absolute;
     bottom: 0.5%;
@@ -925,43 +751,29 @@
 .home-laser-beam.lb0 {
     width: 1svh;
     animation: laser 6s infinite;
-    border-top: 150svh solid rgba(156, 226, 180, 0.08);
+    border-top: 150svh solid rgba(156, 226, 180, 0.04);
     z-index: 7;
 }
 
 .home-laser-beam.lb1 {
     width: 0.8svh;
     animation: laser 6.5s infinite;
-    border-top: 150svh solid rgba(156, 226, 180, 0.1);
+    border-top: 150svh solid rgba(156, 226, 180, 0.07);
     z-index: 8;
 }
 
 .home-laser-beam.lb2 {
     width: 1.2svh;
     animation: laser 7s infinite;
-    border-top: 150svh solid rgba(156, 226, 180, 0.2);
+    border-top: 150svh solid rgba(156, 226, 180, 0.06);
     z-index: 9;
 }
 
 .home-laser-beam.lb3 {
     width: 0.7svh;
     animation: laser 7.5s infinite;
-    border-top: 150svh solid rgba(156, 226, 180, 0.07);
+    border-top: 150svh solid rgba(156, 226, 180, 0.05);
     z-index: 10;
-}
-
-@keyframes laser {
-    0% {
-        transform: rotateZ(30deg) translateX(-50%);
-    }
-
-    50% {
-        transform: rotateZ(55deg) translateX(-50%);
-    }
-
-    100% {
-        transform: rotateZ(30deg) translateX(-50%);
-    }
 }
 
 .home-ufo-group {
@@ -1028,10 +840,6 @@
     height: 100%;
 }
 
-.home-arrow-sign img:hover {
-    transition: all 0.2s ease-in-out;
-}
-
 .home-slide-text-container {
     position: absolute;
     top: 5%;
@@ -1048,99 +856,6 @@
     margin: 0;
     padding: 0;
     display: none;
-}
-
-.home-slide-title {
-    position: relative;
-    overflow: hidden;
-    width: 100%;
-}
-
-.home-slide-title-1,
-.home-slide-title-2 {
-    position: relative;
-    width: 96%;
-    height: var(--std-130rem-font-size);
-    text-align: left;
-    font-size: var(--std-130rem-font-size);
-    overflow: hidden;
-    padding: 1%;
-    margin-top: 2%;
-    background-color: black;
-    border-top-right-radius: 16px;
-    border-top-left-radius: 16px;
-    border-bottom-right-radius: 16px;
-    border-bottom-left-radius: 16px;
-    border: 0.1rem solid #02696f;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.home-slide-we-do-title {
-    top: 0;
-    left: 0;
-    position: absolute;
-    padding: 0 0.57rem;
-    transition: all 0.5s ease-in-out;
-}
-
-.home-slide-we-are-title {
-    top: 100%;
-    left: 0;
-    position: absolute;
-    padding: 0 0.57rem;
-    transition: all 0.5s ease-in-out;
-}
-
-.home-slide-we-guide-title {
-    top: 200%;
-    left: 0;
-    position: absolute;
-    padding: 0 0.57rem;
-    transition: all 0.5s ease-in-out;
-}
-
-.home-slide-body {
-    position: relative;
-    margin-top: 5%;
-    width: 100%;
-    height: 4.2rem;
-    padding: 0.57rem 0.3rem 0.57rem 0.57rem;
-    font-size: var(--std-057rem-font-size);
-    line-height: 130%;
-    overflow: hidden;
-    background-color: rgba(1, 35, 37, 0.8);
-    border-top-right-radius: 16px;
-    border-top-left-radius: 16px;
-    border-bottom-right-radius: 16px;
-    border-bottom-left-radius: 16px;
-    border: 0.1rem solid #02696f;
-}
-
-.home-slide-we-do-body {
-    top: 0;
-    left: 0;
-    position: absolute;
-    padding: 0.57rem 0.3rem 0.57rem 0.57rem;
-    transition: all 0.5s ease-in-out;
-}
-
-.home-slide-we-are-body {
-    top: 100%;
-    left: 0;
-    position: absolute;
-    padding: 0.57rem 0.3rem 0.57rem 0.57rem;
-    transition: all 0.5s ease-in-out;
-}
-
-.home-slide-we-guide-body {
-    top: 200%;
-    left: 0;
-    position: absolute;
-    padding: 0.57rem 0.3rem 0.57rem 0.57rem;
-    transition: all 0.5s ease-in-out;
 }
 
 .home-bg-circle-container {

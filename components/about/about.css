@@ -32,12 +32,6 @@
     justify-content: end;
     align-items: center;
     background-color: #013134;
-    /*---------------------------*/
-}
-
-.about-to-right,
-.about-to-left {
-    cursor: pointer;
 }
 
 .about-intro {
@@ -49,7 +43,6 @@
     align-items: center;
     justify-content: start;
     align-self: start;
-    /*manual size*/
     font-size: 2rem;
     border-bottom: 1px solid #015256;
 }
@@ -62,7 +55,6 @@
     justify-content: center;
     align-items: end;
     background-color: #012729;
-    /*------------------------------*/
 }
 
 .about-weare-group {
@@ -71,8 +63,6 @@
     align-items: start;
     justify-content: end;
     font-size: var(--std-057rem-font-size);
-    ;
-    /* background-color: green; */
 }
 
 .about-weare-box {
@@ -109,18 +99,12 @@
     border-top-left-radius: 32px;
 }
 
-.about-service-box span:hover {
-    color: #000c0c;
-    border: 1px solid var(--base-font-color);
-}
-
 .about-title-group {
     display: flex;
     flex-direction: column;
     align-items: end;
     justify-content: center;
     width: 100%;
-    /* background-color: red; */
 }
 
 .right-arrow {
@@ -138,11 +122,6 @@
     -webkit-text-select: none;
     -webkit-user-select: none;
     -webkit-tap-highlight-color: transparent;
-}
-
-.right-arrow:hover {
-    background-color: #171717;
-    color: var(--base-font-color);
 }
 
 .about-title-box {
@@ -186,7 +165,6 @@
     justify-content: center;
     align-items: center;
     overflow-x: hidden;
-    /* background-color: #252a2e; */
     margin: 0;
     padding: 0;
 }
@@ -251,11 +229,6 @@
     -webkit-tap-highlight-color: transparent;
 }
 
-.left-arrow:hover {
-    background-color: #171717;
-    color: var(--base-font-color);
-}
-
 .contact-reachus {
     text-align: right;
     font-size: var(--std-130rem-font-size);
@@ -278,7 +251,6 @@
     border-top: 1px solid var(--base-font-color);
     border-bottom: 1px solid var(--base-font-color);
     font-size: var(--std-057rem-font-size);
-    ;
     color: var(--base-font-color);
 }
 
@@ -298,23 +270,12 @@
     background-color: #015256;
     color: var(--base-font-color);
     border: 2px solid #015256;
-    /* border-radius: 33% 67% 66% 34% / 47% 48% 52% 53%; */
-    /* border-bottom-left-radius: 32px;
-    border-top-left-radius: 32px;
-    border-bottom-right-radius: 32px;
-    border-top-right-radius: 32px; */
     user-select: none;
     -moz-user-select: none;
     -webkit-text-select: none;
     -webkit-user-select: none;
     -webkit-tap-highlight-color: transparent;
     overflow: hidden;
-}
-
-.contact-type-button:hover {
-    background-color: #015256;
-    color: #000c0c;
-    border: 2px solid #015256;
 }
 
 .contactTypeButtonActive {
@@ -371,7 +332,6 @@
     width: 70%;
     height: 95%;
     font-size: var(--std-057rem-font-size);
-    ;
 }
 
 .we-are-here {
@@ -380,7 +340,6 @@
     margin-bottom: 2%;
 }
 
-/*-----------------------START-map------------*/
 .contact-map {
     position: relative;
     width: 100%;
@@ -402,8 +361,6 @@
     padding: 0;
 }
 
-/*-----------------------END-map------------*/
-/*-----------------------START-email------------*/
 .contact-email {
     position: relative;
     width: 100%;
@@ -431,8 +388,6 @@
     border-bottom: 1px dashed #015256;
 }
 
-/*-----------------------END-email------------*/
-/*-----------------------START-sociallink------------*/
 .contact-link {
     display: flex;
     position: relative;
@@ -473,15 +428,11 @@
 }
 
 .social-link {
-    /* margin-right: 10%; */
     font-size: var(--std-060rem-font-size);
     color: var(--base-font-color);
     ;
 }
 
-/*-----------------------END-sociallink------------*/
-/*---------------------------END CONTACT HUB----------------*/
-/*---------------------------START CONTACT FORM----------------*/
 .form-group {
     display: flex;
     flex-direction: column;
@@ -515,12 +466,6 @@
     ;
 }
 
-.input-group input:focus {
-    background-color: #e9ecef;
-    color: #171717;
-    outline: none;
-}
-
 .input-group textarea {
     width: 96%;
     margin: 1% 0 1% 0;
@@ -530,12 +475,6 @@
     font-size: var(--std-075rem-font-size);
     color: var(--base-font-color);
     ;
-}
-
-.input-group textarea:focus {
-    background-color: #e9ecef;
-    color: #171717;
-    outline: none;
 }
 
 .submit-group {
@@ -562,21 +501,4 @@
     -webkit-tap-highlight-color: transparent;
     color: var(--base-font-color);
     ;
-}
-
-.submit-group button:hover {
-    background-color: var(--base-font-color);
-    ;
-    color: #171717;
-    border: 1px solid var(--base-font-color);
-    ;
-}
-
-.reveal-item {
-    width: 80%;
-    padding: 20px;
-    margin: 10px;
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.5s, transform 0.5s;
 }

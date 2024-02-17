@@ -55,15 +55,14 @@ export const homeModule = () => {
       homeSpeechBubble.style.opacity = 0;
 
       homeUfoGroup.style.bottom = "120%";
-      setTimeout(() => {
-        globeLighthouse.style.visibility = "hidden";
-        globeLighthouse.style.opacity = 0;
-      }, 400);
+      
+      globeLighthouse.style.visibility = "hidden";
+      globeLighthouse.style.opacity = 0;
       setTimeout(() => {
         laser.forEach(element => {
               element.style.animation = "none";
           });
-      }, 1000);
+      }, 500);
   
       setTimeout(() => {          
         globeBalloon.style.transform = "rotate(10deg)";
@@ -86,7 +85,7 @@ export const homeModule = () => {
             globeWheel.style.transform = "rotate(0deg)";
             globeBalloonSmall.style.opacity = 1;
             
-          }, 500);    
+          }, 400);    
         }, 720);    
       }, 700);    
     } else if (index == 2) {    
@@ -96,15 +95,15 @@ export const homeModule = () => {
       weAreBar.style.top = "0";
       weGuideSlide.style.top = "100%";
       weGuideBar.style.top = "100%";
-   
+
+      globeBalloonSmall.style.opacity = 0;
+      homeUfoGroup.style.bottom = "120%";
+
       setTimeout(() => {
         homeBalloonTitleContainer.style.opacity="0";
         homeBalloonTitle.style.top ="100%";
       }, 100);
-      setTimeout(() => {
-        globeBalloonSmall.style.opacity = 0;
-        homeUfoGroup.style.bottom = "120%";
-      }, 400);
+
       globeBalloon.style.transform = "rotate(10deg)";
       globeBalloonBg.style.transform = "rotate(10deg)";
       globeBalloonSmall.style.transform = "rotate(10deg)";
@@ -122,9 +121,9 @@ export const homeModule = () => {
           setTimeout(() => {          
               homeSpeechBubble.style.visibility = "visible";
               homeSpeechBubble.style.opacity = 1;
-          }, 700);
-        }, 400);
-      }, 400);
+          }, 1000);
+        }, 300);
+      }, 300);
     } else if (index == 3) {
       weDoSlide.style.top = "-200%";
       weDoBar.style.top = "-200%";
@@ -144,8 +143,8 @@ export const homeModule = () => {
             lb.style.animation = `laser ${6 + 0.5 * index}s infinite`;
           });
         }, 50);
-      }, 1000);
-    }, 400);
+      }, 800);
+    }, 800);
     }
     setTimeout(() => {
       globeCore.style.transform = "rotate(" + degrees + "deg)";

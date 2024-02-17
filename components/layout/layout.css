@@ -23,7 +23,6 @@
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    /* display: none; */
 }
 
 .content-section {
@@ -40,7 +39,6 @@
     background-color: #001719;
 }
 
-/*For Temp*/
 #work {
     height: 50svh;
 }
@@ -93,30 +91,9 @@
     transition: all 0.25s linear;
 }
 
-@media screen and (orientation: portrait) {
-    .circle {
-        display: none;
-    }
-
-    @media screen and (min-width: 768px) {
-        .logo-sticky {
-            width: 8%;
-        }
-    }
-
-    @media screen and (max-width: 768px) {
-        .logo-sticky {
-            width: 12%;
-        }
-    }
-
-}
-
 .logo-sticky img {
     width: 100%;
     position: relative;
     filter: drop-shadow(0.02rem 0.02rem 0.6rem rgb(1, 29, 31)) brightness(80%);
 
 }
-
-/*-----------------END content SECTION--------------------*/

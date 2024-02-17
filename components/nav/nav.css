@@ -46,20 +46,11 @@
         0 0.15rem 1rem 0 rgba(0, 0, 0, 0.19);
 }
 
-.bubble-handle.grabbing {
-    cursor: grabbing;
-}
-
 .bubble-handle-button {
     width: 0.5rem;
     height: 0.5rem;
     background-color: #171717;
     transform: translate(50%, 50%);
-}
-
-.bubble-handle-button:hover,
-.bubble-handle-button:active {
-    background-color: #4993da;
 }
 
 .bubble-button .hamburger-icon,
@@ -104,17 +95,6 @@
     transform: rotate(-45deg);
 }
 
-.bubble-button:hover .hamburger-icon,
-.bubble-button:hover .hamburger-icon::before,
-.bubble-button:hover .hamburger-icon::after {
-    background-color: #e74c3c;
-}
-
-.menu-active:hover .hamburger-icon {
-    background-color: transparent;
-}
-
-/* Menu */
 .menu-section {
     position: fixed;
     left: 0;
@@ -137,44 +117,6 @@
     justify-content: center;
     align-items: start;
 }
-
-/* .term-group {
-    font-size: 0.5rem;
-    width: 90%;
-    height: 6%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #6c757d;
-    margin: 2% 5% 2% 5%;
-}
-
-.term-group-container {
-    width: 70%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
-
-.term-group-left {
-    padding: 0 2% 0 2%;
-    width: 31%;
-    display: flex;
-    justify-content: end;
-    align-items: start;
-    color: #495057;
-    border-right: 0.05rem solid #495057;
-}
-
-.term-group-right {
-    padding: 0 2% 0 2%;
-    width: 61%;
-    display: flex;
-    justify-content: start;
-    align-items: start;
-    color: #dee2e6;
-} */
 
 .menu-section.active {
     top: 0;
@@ -216,13 +158,6 @@
     -webkit-tap-highlight-color: transparent;
 }
 
-.right-menu a:hover,
-.left-menu a:hover {
-    color: #000c0c;
-    background-color: #1b8388;
-    padding: 3%;
-}
-
 .right-menu a:last-child {
     font-family: "Megrim";
     font-size: 1.9rem;
@@ -234,7 +169,6 @@
     color: #000c0c;
 }
 
-/*-----------------------3 DOTS SET------------------------------------*/
 .nav-dot-group,
 .nav-dot-group-dop {
     position: fixed;
@@ -281,11 +215,6 @@
 
 .nav-dot-group a {
     color: #b3d6d7;
-}
-
-.nav-dot-group a:hover {
-    color: #171717;
-    background-color: #c34334;
 }
 
 .navLinkActive {
