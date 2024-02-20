@@ -29,20 +29,31 @@ export const homeModule = () => {
 
   const homeUfoGroup = qs(".home-ufo-group");
 
+  const homeBarContainer = qs(".home-bar-container");
+  const homeGlobeBox = qs(".home-globe-box");
+
+
+  setTimeout(() => {
+    homeBarContainer.style.bottom = "0%";
+  }, 2800);
+  setTimeout(() => {
+    globeCore.style.bottom = "-85%";
+  }, 2400);
+
   function rotateWorld(degrees, index,duration) {
     const titleAdjustments = [
       [{ titles: weDoTitle, topValue: "0" }, { titles: weAreTitle, topValue: "100%" }, { titles: weGuideTitle, topValue: "200%" }],
       [{ titles: weDoTitle, topValue: "-100%" }, { titles: weAreTitle, topValue: "0" }, { titles: weGuideTitle, topValue: "100%" }],
       [{ titles: weDoTitle, topValue: "-200%" }, { titles: weAreTitle, topValue: "-100%" }, { titles: weGuideTitle, topValue: "0" }]
-  ];
+    ];
   
-  if (index >= 1 && index <= 3) {
+    if (index >= 1 && index <= 3) {
       titleAdjustments[index - 1].forEach(({ titles, topValue }) => {
           titles.forEach(title => {
               title.style.top = topValue;
           });
       });
-  }
+    }
     if (index == 1) {
       weDoSlide.style.top = "0";
       weDoBar.style.top = "0";
@@ -62,8 +73,7 @@ export const homeModule = () => {
         laser.forEach(element => {
               element.style.animation = "none";
           });
-      }, 500);
-  
+      }, 500);  
       setTimeout(() => {          
         globeBalloon.style.transform = "rotate(10deg)";
         globeBalloonBg.style.transform = "rotate(10deg)";
@@ -147,8 +157,8 @@ export const homeModule = () => {
     }, 800);
     }
     setTimeout(() => {
-      globeCore.style.transform = "rotate(" + degrees + "deg)";
-      globeCore.style.transitionDuration = duration+"s";
+      homeGlobeBox.style.transform = "rotate(" + degrees + "deg)";
+      homeGlobeBox.style.transitionDuration = duration+"s";
     }, 189);
   }
   

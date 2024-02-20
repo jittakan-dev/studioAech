@@ -31,11 +31,27 @@ const scriptController = (function () {
   })();
 
   document.addEventListener("DOMContentLoaded", () => {
-    var loader = document.getElementById("mainLoader");
-    loader.style.display = "none";
-    
-    var app = document.getElementById("app");
-    app.style.display = "block";
+    setTimeout(() => {
+      let logo = document.getElementById("loader-logo");
+      logo.style.top = "55%";
+      logo.style.opacity = "100%";
+      setTimeout(() => {
+        logo.style.top = "55%";     
+        setTimeout(() => {
+          logo.style.opacity = "1%";
+        setTimeout(() => {
+          let loader = document.getElementById("mainLoader");
+          loader.style.top = "-100%";
+        }, 1000);
+      }, 600);
+      }, 500);
+    }, 100);
+
+    setTimeout(() => {
+      let app = document.getElementById("app");
+      app.style.display = "block";
+    }, 100);
+
     scriptController
       .loadModules()
       .then(() => {
