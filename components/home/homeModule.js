@@ -35,10 +35,10 @@ export const homeModule = () => {
 
   setTimeout(() => {
     homeBarContainer.style.bottom = "0%";
-  }, 2800);
+  }, 3200);
   setTimeout(() => {
     globeCore.style.bottom = "-85%";
-  }, 2400);
+  }, 2700);
 
   function rotateWorld(degrees, index,duration) {
     const titleAdjustments = [
